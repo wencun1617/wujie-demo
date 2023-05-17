@@ -12,7 +12,8 @@
     "common": "workspace:^1.0.0",
     "element-plus": "^2.3.2",
     "rxjs": "^7.8.0",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",

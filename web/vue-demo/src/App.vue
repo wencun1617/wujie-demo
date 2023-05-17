@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+const handleJump = (url:any) => {
+  router.push( `/${url}`);
+};
+
 import {ref} from 'vue'
 let current = ref(0)
 const send = () => {
@@ -19,10 +25,21 @@ const send = () => {
         <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
       </a>
     </div>
+    <h1>Vite + Vue</h1>
     <button @click="send">点击 {{ current }}</button>
-    <HelloWorld msg="Vite + Vue" />
+    <!-- <HelloWorld msg="Vite + Vue" /> -->
+    <br>
+    <button @click="handleJump('about')">
+      about
+    </button>
+    <button @click="handleJump('profile')">
+      profile
+    </button>
+
+    <router-view />
   </div>
 </template>
+
 
 <style scoped>
 .logo {
