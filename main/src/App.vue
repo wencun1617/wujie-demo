@@ -12,9 +12,11 @@
 <script setup lang='ts'>
 import {ref,reactive} from 'vue'
 import {bus} from 'wujie'
+console.log("🚀 ~ file: App.vue:15 ~ bus:", bus)
 
-bus.$on('vue3', (data: any) => {
-    console.log(data,'我是主应用')
+
+bus.$on('vue3', (...args:any[]) => {
+    console.log(args,'我是主应用')
 })
 </script>
 

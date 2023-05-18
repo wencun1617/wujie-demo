@@ -43,13 +43,13 @@ import {
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/about",
+    path: "/child/application/about",
     name: 'about',
     component: () =>
       import("@/components/about.vue")
   },
   {
-    path: "/profile",
+    path: "/child/application/profile",
     name: 'profile',
     component: () =>
       import("@/components/profile.vue")
